@@ -45,7 +45,7 @@ module.exports = async function (req, res) {
 
   if (keyCount < 1 || !query.state) {
     send(res, 502, {
-      error: 'Invalid request'
+      error: 'invalid_request'
     })
 
     return
@@ -59,7 +59,25 @@ module.exports = async function (req, res) {
     return
   }
 
-  send(res, 200, {
-    test: 'Dd'
+  if (query.state) {
+    const ID = query.state
+
+    if (tokens[ID]) {
+      send(res, 200, {
+        token: tokens[ID]
+      })
+
+      return
+    }
+
+    send(res, 403, {
+      error: 'state_not_defined'
+    })
+
+    return
+  }
+
+  send(res, 502, {
+    error: 'invalid_request'
   })
 }
