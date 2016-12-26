@@ -12,6 +12,8 @@
   },
   "homepage": "https://github.com/zeit/release-auth#readme",
   "dependencies": {
-    "micro": "^6.1.0"
+    "micro": "^6.1.0",
+    "request": "^2.79.0",
+    "request-promise-native": "^1.0.3"
   }
 }
