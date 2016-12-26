@@ -42,7 +42,6 @@ module.exports = async function (req, res) {
   const query = urlParts.query
 
   const keyCount = Object.keys(query).length
-  console.log(query)
 
   if (keyCount < 1 || !query.state) {
     send(res, 502, {
@@ -67,6 +66,9 @@ module.exports = async function (req, res) {
       send(res, 200, {
         token: tokens[ID]
       })
+
+      // Wipe token from RAM
+      delete tokens[ID]
 
       return
     }
