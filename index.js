@@ -42,6 +42,7 @@ module.exports = async function (req, res) {
   const query = urlParts.query
 
   const keyCount = Object.keys(query).length
+  console.log(query)
 
   if (keyCount < 1 || !query.state) {
     send(res, 502, {
@@ -53,7 +54,7 @@ module.exports = async function (req, res) {
 
   if (query.code && query.state) {
     const token = await requestToken(query.code, query.state)
-    tokens[state] = token
+    tokens[query.state] = token
 
     send(res, 200, 'Done. You can close this window now!')
     return
