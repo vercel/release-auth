@@ -4,7 +4,7 @@ Handles the OAuth authentication with GitHub's webflow for [release](https://git
 
 ## Contributing
 
-1. Create a new OAuth application in [your GitHub account](https://github.com/settings/developers). If you're working at [@zeit](https://github.com/zeit), just get the keys from [here](https://github.com/organizations/zeit/settings/applications).
+1. Create a new OAuth application in [your GitHub account](https://github.com/settings/developers) (if you're working at [@zeit](https://github.com/zeit), just get the keys from [here](https://github.com/organizations/zeit/settings/applications))
 2. Set the "Authorization callback URL" to `https://release-auth.now.sh`
 3. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
 4. Install the dependencies: `npm install`
