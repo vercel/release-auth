@@ -2,7 +2,8 @@
   "name": "release-auth",
   "description": "Handles the OAuth authentication for `release`",
   "scripts": {
-    "start": "micro -p 5000 index.js"
+    "start": "micro -p 5000 index.js",
+    "deploy": "now -e CLIENT_ID=@client-id -e CLIENT_SECRET=@client-secret --alias release-auth.now.sh"
   },
   "repository": "zeit/release-auth",
   "license": "MIT",
