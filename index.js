@@ -13,7 +13,7 @@ if (!client_id || !client_secret) {
   process.exit(1)
 }
 
-let tokens = {}
+const tokens = new Map()
 
 const requestToken = async (code, state) => {
   if (!code || !state) {
@@ -58,7 +58,7 @@ module.exports = async function (req, res) {
 
   if (query.code && query.state) {
     const token = await requestToken(query.code, query.state)
-    tokens[query.state] = String(token)
+    tokens.set(query.state, new Buffer(token))
 
     send(res, 200, 'Done. You can close this window now!')
     return
@@ -67,14 +67,14 @@ module.exports = async function (req, res) {
   if (query.state) {
     const ID = query.state
 
-    if (tokens[ID]) {
+    if (tokens.has(ID)) {
       send(res, 200, {
-        token: tokens[ID]
+        token: tokens.get(ID).toString()
       })
 
       // Securily wipe token from RAM
-      tokens[ID] = null
-      delete tokens[ID]
+      tokens.get(ID).fill(0)
+      tokens.delete(ID)
 
       return
     }
