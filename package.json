@@ -5,12 +5,7 @@
     "start": "micro -p 5000 index.js"
   },
   "repository": "zeit/release-auth",
-  "author": "leo",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zeit/release-auth/issues"
-  },
-  "homepage": "https://github.com/zeit/release-auth#readme",
   "dependencies": {
     "micro": "^6.1.0",
     "request": "^2.79.0",
