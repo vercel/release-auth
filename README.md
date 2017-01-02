@@ -1,6 +1,6 @@
 # release-auth
 
-Handles the OAuth authentication for `release`
+Handles the OAuth authentication with GitHub's webflow for [release](https://github.com/zeit/release).
 
 ## Contributing
 
