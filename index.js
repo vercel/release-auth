@@ -58,7 +58,7 @@ module.exports = async function (req, res) {
 
   if (query.code && query.state) {
     const token = await requestToken(query.code, query.state)
-    tokens[query.state] = token
+    tokens[query.state] = String(token)
 
     send(res, 200, 'Done. You can close this window now!')
     return
@@ -72,7 +72,8 @@ module.exports = async function (req, res) {
         token: tokens[ID]
       })
 
-      // Wipe token from RAM
+      // Securily wipe token from RAM
+      tokens[ID] = null
       delete tokens[ID]
 
       return
