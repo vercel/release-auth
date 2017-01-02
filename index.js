@@ -5,10 +5,15 @@ const url = require('url')
 const {send} = require('micro')
 const request = require('request-promise-native')
 
-let tokens = {}
+const client_id = process.env.CLIENT_ID
+const client_secret = process.env.CLIENT_SECRET
 
-const client_id = '08bd4d4e3725ce1c0465'
-const client_secret = '98ecfe426906f3a861fe86078b73ba431d78becc'
+if (!client_id || !client_secret) {
+  console.error('Please define the necessary env variables.')
+  process.exit(1)
+}
+
+let tokens = {}
 
 const requestToken = async (code, state) => {
   if (!code || !state) {
