@@ -3,7 +3,16 @@
   "description": "Handles the OAuth authentication for `release`",
   "scripts": {
     "start": "micro -p 5000 index.js",
+    "test": "xo",
     "deploy": "now -e CLIENT_ID=@client-id -e CLIENT_SECRET=@client-secret --alias release-auth.now.sh"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false,
+    "rules": {
+      "unicorn/no-process-exit": 0,
+      "camelcase": 0
+    }
   },
   "repository": "zeit/release-auth",
   "license": "MIT",
@@ -11,5 +20,8 @@
     "micro": "^6.1.0",
     "request": "^2.79.0",
     "request-promise-native": "^1.0.3"
+  },
+  "devDependencies": {
+    "xo": "^0.17.1"
   }
 }
