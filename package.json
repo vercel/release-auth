@@ -19,7 +19,7 @@
   "repository": "zeit/release-auth",
   "license": "MIT",
   "dependencies": {
-    "micro": "^6.1.0",
+    "micro": "^7.0.6",
     "request": "^2.79.0",
     "request-promise-native": "^1.0.3"
   },
