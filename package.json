@@ -3,7 +3,7 @@
   "scripts": {
     "start": "micro -p 5000 index.js",
     "test": "xo",
-    "deploy": "now -e CLIENT_ID=@client-id -e CLIENT_SECRET=@client-secret --alias release-auth.now.sh"
+    "deploy": "now -e CLIENT_ID=@client-id -e CLIENT_SECRET=@client-secret"
   },
   "xo": {
     "space": true,
