@@ -3,7 +3,8 @@
   "scripts": {
     "start": "micro -p 5000 index.js",
     "test": "xo",
-    "deploy": "now -e CLIENT_ID=@client-id -e CLIENT_SECRET=@client-secret"
+    "deploy": "now -e CLIENT_ID=@client-id -e CLIENT_SECRET=@client-secret",
+    "precommit": "npm run test"
   },
   "xo": {
     "space": true,
@@ -24,6 +25,7 @@
     "request-promise-native": "1.0.3"
   },
   "devDependencies": {
+    "husky": "0.13.1",
     "xo": "0.17.1"
   }
 }
