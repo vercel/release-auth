@@ -21,12 +21,12 @@
   "repository": "zeit/release-auth",
   "license": "MIT",
   "dependencies": {
-    "micro": "7.0.6",
-    "request": "2.79.0",
-    "request-promise-native": "1.0.3"
+    "micro": "7.3.3",
+    "request": "2.81.0",
+    "request-promise-native": "1.0.4"
   },
   "devDependencies": {
-    "husky": "0.13.1",
-    "xo": "0.17.1"
+    "husky": "0.13.3",
+    "xo": "0.18.2"
   }
 }
