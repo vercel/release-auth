@@ -16,7 +16,7 @@
     }
   },
   "now": {
-    "alias": "release-auth.now.sh"
+    "alias": "release-auth.zeit.sh"
   },
   "repository": "zeit/release-auth",
   "license": "MIT",

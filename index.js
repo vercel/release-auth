@@ -58,7 +58,7 @@ module.exports = async function (req, res) {
 
   if (query.code && query.state) {
     const token = await requestToken(query.code, query.state)
-    tokens.set(String(query.state), new Buffer(token))
+    tokens.set(String(query.state), Buffer.from(token))
 
     send(res, 200, 'Done. You can close this window now!')
     return
