@@ -1,6 +1,7 @@
 {
   "name": "release-auth",
   "version": "1.0.2",
+  "private": true,
   "scripts": {
     "start": "micro -p 5000 index.js",
     "test": "xo",
