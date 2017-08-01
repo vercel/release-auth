@@ -12,7 +12,7 @@ Handles the OAuth authentication with GitHub's webflow for [release](https://git
 2. Set the "Authorization callback URL" to `https://release-auth.zeit.sh`
 3. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
 4. Install the dependencies: `npm install`
-5. Start the server: `CLIENT_ID="<id>" CLIENT_SECRET="<secret>" npm start`
+5. Start the server: `CLIENT_ID="<id>" CLIENT_SECRET="<secret>" npm run dev`
 
 As always, you can use `npm test` to run the tests and see if your changes have broken anything.
 
