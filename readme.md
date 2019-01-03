@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/zeit/release-auth.svg?branch=master)](https://travis-ci.org/zeit/release-auth)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
-[![Slack Channel](http://zeit-slackin.now.sh/badge.svg)](https://zeit.chat)
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/zeit)
 
 Handles the OAuth authentication with GitHub's webflow for [release](https://github.com/zeit/release).
 
