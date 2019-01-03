@@ -34,8 +34,8 @@ const requestToken = async (code, state) => {
       },
       json: true
     })
-  } catch (err) {
-    console.error(err)
+  } catch (error) {
+    console.error(error)
     return false
   }
 
@@ -43,9 +43,7 @@ const requestToken = async (code, state) => {
 }
 
 module.exports = async function (req, res) {
-  const urlParts = url.parse(req.url, true)
-  const query = urlParts.query
-
+  const {query} = url.parse(req.url, true)
   const keyCount = Object.keys(query).length
 
   if (keyCount < 1 || !query.state) {
