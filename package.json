@@ -17,9 +17,6 @@
       "camelcase": 0
     }
   },
-  "now": {
-    "alias": "release-auth.zeit.sh"
-  },
   "repository": "zeit/release-auth",
   "license": "MIT",
   "dependencies": {

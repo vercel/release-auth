@@ -1,0 +1,8 @@
+{
+    "version": 1,
+    "alias": "release-auth.zeit.sh",
+    "env": {
+        "CLIENT_ID": "@release-auth-id",
+        "CLIENT_SECRET": "@release-auth-secret"
+    }
+}
