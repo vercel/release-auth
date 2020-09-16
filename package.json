@@ -3,10 +3,7 @@
   "version": "1.0.5",
   "private": true,
   "scripts": {
-    "start": "micro",
-    "dev": "micro-dev",
     "test": "xo",
-    "deploy": "now -e CLIENT_ID=@release-auth-id -e CLIENT_SECRET=@release-auth-secret",
     "precommit": "npm run test"
   },
   "xo": {
@@ -17,7 +14,7 @@
       "camelcase": 0
     }
   },
-  "repository": "zeit/release-auth",
+  "repository": "vercel/release-auth",
   "license": "MIT",
   "dependencies": {
     "micro": "8.0.1",
@@ -26,7 +23,6 @@
   },
   "devDependencies": {
     "husky": "0.14.3",
-    "micro-dev": "1.0.2",
     "xo": "0.23.0"
   }
 }
