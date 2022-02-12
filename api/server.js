@@ -8,7 +8,7 @@ if (!client_id || !client_secret) {
 
 const tokens = new Map();
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   console.log({ client_id, client_secret });
 
   const keyCount = Object.keys(req.query).length;
