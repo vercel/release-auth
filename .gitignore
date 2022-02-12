@@ -3,4 +3,4 @@ npm-debug.log
 package-lock.json
 
 .vercel
-.env
+.env.local

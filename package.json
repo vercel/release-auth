@@ -1,14 +1,9 @@
 {
   "private": true,
   "name": "release-auth",
-  "version": "1.0.5",
-  "scripts": {
-    "dev": "vercel dev"
-  },
   "repository": "vercel/release-auth",
   "license": "MIT",
+  "scripts": {},
   "dependencies": {},
-  "devDependencies": {
-    "vercel": "latest"
-  }
+  "devDependencies": {}
 }
