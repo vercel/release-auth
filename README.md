@@ -8,5 +8,5 @@ Handles the OAuth authentication with GitHub's webflow for [release](https://git
 1. Set the "Authorization callback URL" to `https://release-auth.vercel.sh`
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
 1. Install the dependencies: `yarn install`
-1. Download environment variables: `vc env pull .env.local`
+1. Download environment variables: `vc env pull`
 1. Start the server: `vercel dev`
