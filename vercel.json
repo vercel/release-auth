@@ -1,10 +1,7 @@
 {
-  "version": 2,
   "env": {
     "CLIENT_ID": "@release-auth-id",
     "CLIENT_SECRET": "@release-auth-secret"
   },
-  "routes": [
-    { "src": "/(.*)", "dest": "/api/server.js" }
-  ]
+  "routes": [{ "src": "/(.*)", "dest": "/api/server.js" }]
 }

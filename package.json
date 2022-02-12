@@ -1,28 +1,14 @@
 {
+  "private": true,
   "name": "release-auth",
   "version": "1.0.5",
-  "private": true,
   "scripts": {
-    "test": "xo",
-    "precommit": "npm run test"
-  },
-  "xo": {
-    "space": true,
-    "semicolon": false,
-    "rules": {
-      "unicorn/no-process-exit": 0,
-      "camelcase": 0
-    }
+    "dev": "vercel dev"
   },
   "repository": "vercel/release-auth",
   "license": "MIT",
-  "dependencies": {
-    "micro": "8.0.1",
-    "request": "2.88.0",
-    "request-promise-native": "1.0.5"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "husky": "0.14.3",
-    "xo": "0.23.0"
+    "vercel": "latest"
   }
 }
