@@ -3,9 +3,7 @@
   "name": "release-auth",
   "repository": "vercel/release-auth",
   "license": "MIT",
-  "scripts": {
-    "vercel-build": "echo $process.env.CLIENT_ID && echo $process.env.CLIENT_SECRET"
-  },
+  "scripts": {},
   "dependencies": {},
   "devDependencies": {}
 }

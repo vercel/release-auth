@@ -9,8 +9,6 @@ if (!client_id || !client_secret) {
 const tokens = new Map();
 
 export default async function handler(req, res) {
-  console.log({ client_id, client_secret });
-
   const keyCount = Object.keys(req.query).length;
   if (keyCount < 1 || !req.query.state) {
     return res.status(502).json({
