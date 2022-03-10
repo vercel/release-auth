@@ -4,6 +4,7 @@
   "repository": "vercel/release-auth",
   "license": "MIT",
   "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
 }
