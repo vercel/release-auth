@@ -66,7 +66,10 @@ const requestToken = async (code, state) => {
           client_id,
           client_secret,
         }),
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
       }
     );
 
