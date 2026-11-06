@@ -109,10 +109,7 @@ module.exports = async function handler(req, res) {
 };
 
 const getClientIP = req => {
-  const ip =
-    process.env.VERCEL === '1'
-      ? req.headers['x-real-ip']
-      : req.socket?.remoteAddress;
+  const ip = req.headers['x-real-ip'];
   return typeof ip === 'string' && isIP(ip) && !ip.includes('%')
     ? ip
     : undefined;

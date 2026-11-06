@@ -13,7 +13,7 @@ const callback = { code: 'test-code', state };
 function createServer(exchange = async () => ({
   ok: true,
   json: async () => ({ access_token: 'test-token' }),
-}), env = {}) {
+})) {
   let now = Date.now();
   const exchanges = [];
   const logs = [];
@@ -30,7 +30,7 @@ function createServer(exchange = async () => ({
       },
     },
     Date: { now: () => now },
-    process: { env: { CLIENT_ID: 'test-client', CLIENT_SECRET: 'test-secret', VERCEL: '1', ...env } },
+    process: { env: { CLIENT_ID: 'test-client', CLIENT_SECRET: 'test-secret' } },
     console: { error: (...args) => logs.push(args) },
     require,
     async fetch(...args) {
@@ -144,15 +144,6 @@ test('fails closed for missing or ambiguous Vercel IPs without using proxy or ot
     assert.equal((await server.request({ state }, options)).statusCode, 403);
   }
   assert.equal(server.exchanges.length, 0);
-});
-
-test('uses the direct socket outside Vercel and ignores user-supplied IP headers', async () => {
-  const server = createServer(undefined, { VERCEL: undefined });
-  await server.request(callback, { socketAddress: browserIP, ip: otherIP });
-  assert.equal((await server.request({ state }, { socketAddress: otherIP })).statusCode, 403);
-  assert.equal((await server.request({ state }, { socketAddress: null })).statusCode, 403);
-  const response = await server.request({ state }, { socketAddress: browserIP, ip: null });
-  assert.deepEqual(response.body, { token: 'test-token' });
 });
 
 test('compares the platform-provided IPv6 address directly', async () => {
